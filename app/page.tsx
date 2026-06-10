@@ -530,7 +530,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -623,6 +623,58 @@ export default function Portfolio() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <Brain className="text-chart-1" size={32} />
+                  <div className="flex gap-2">
+                    <a
+                      href="https://github.com/snkttrivedi/threejs-hand-interactions"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github size={20} />
+                    </a>
+                    <a
+                      href="https://threejs-hand-interactions.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  </div>
+                </div>
+                <CardTitle className="text-xl">
+                  Three.js Hand Interactions
+                </CardTitle>
+                <CardDescription>Three.js, MediaPipe Hands, Vanilla JS, HTML/CSS</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Real-time AR experience demonstrating gesture-based 3D object manipulation using MediaPipe AI.
+                </p>
+                <div className="space-y-3 mb-4">
+                  <div>
+                    <p className="text-sm font-medium">Key Features:</p>
+                    <ul className="text-sm text-muted-foreground mt-1 space-y-1">
+                      <li>• Real-time hand tracking detecting 21 3D landmarks with high precision</li>
+                      <li>• Natural gesture controls: left hand pinch to resize, move hand to rotate</li>
+                      <li>• Shape switching (Sphere, Cube, Torus) and dynamic touch color change</li>
+                      <li>• Clean, class-based ES Modules architecture with no build steps</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Three.js</Badge>
+                  <Badge variant="secondary">MediaPipe</Badge>
+                  <Badge variant="secondary">Vanilla JS</Badge>
+                  <Badge variant="secondary">AR/3D</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <Brain className="text-chart-3" size={32} />
                   <div className="flex gap-2">
                     <a
                       href="https://github.com/snkttrivedi/Swipe-ai-interview-assistant"
