@@ -107,8 +107,9 @@ export default function Portfolio() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
-    // Example: Use Formspree endpoint
-    const res = await fetch("https://formspree.io/f/mkgzdvaa", {
+    // Use environment variable for Formspree form ID, fallback to default if not set
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "xdavlnda";
+    const res = await fetch(`https://formspree.io/f/${formId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
